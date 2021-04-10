@@ -5,10 +5,9 @@ const users = [
   { name: 'Lux', active: false },
 ];
 
-let updatedUsers = [];
-
 const toggleUserState = (allUsers, userName) => {
   const promise = new Promise((resolve, reject) => {
+    let updatedUsers = [];
     resolve(
       (updatedUsers = allUsers.map(user =>
         user.name === userName ? { ...user, active: !user.active } : user,
